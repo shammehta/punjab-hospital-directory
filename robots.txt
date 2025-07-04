@@ -1,0 +1,11 @@
+# ✅ Allow Google to crawl public pages
+User-agent: *
+Allow: /
+Allow: /articles.html
+
+# ❌ Disallow private/sensitive pages
+Disallow: /admin-login.html
+Disallow: /admin-panel.html
+Disallow: /backup.html
+Disallow: /secret.html
+Disallow: /hospital-data.json

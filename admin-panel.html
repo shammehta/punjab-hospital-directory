@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | Punjab Health Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-5xl mx-auto mt-12 p-6 bg-white rounded shadow">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">👨‍💼 Admin Dashboard</h1>
+      <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Logout</button>
+    </div>
+
+    <p class="mb-4 text-green-600">🎉 Welcome, Admin! You have successfully logged in.</p>
+
+    <!-- ➕ Hospital Form -->
+    <h2 class="text-xl font-bold mb-4 mt-10">🏥 Add / Edit Hospital</h2>
+    <form id="hospitalForm" class="space-y-4">
+      <input type="hidden" id="editIndex">
+      <input type="text" placeholder="Hospital Name" id="hName" class="w-full border px-3 py-2 rounded" required>
+      <input type="text" placeholder="District" id="hDistrict" class="w-full border px-3 py-2 rounded" required>
+      <div>
+        <label class="block text-sm font-medium mb-1">Type:</label>
+        <label><input type="radio" name="hType" value="Government" required> Government</label>
+        <label class="ml-4"><input type="radio" name="hType" value="Private"> Private</label>
+      </div>
+      <input type="text" placeholder="Contact Number" id="hContact" class="w-full border px-3 py-2 rounded">
+      <textarea placeholder="Address" id="hAddress" class="w-full border px-3 py-2 rounded" rows="2"></textarea>
+      <input type="url" placeholder="Google Maps Link" id="hMap" class="w-full border px-3 py-2 rounded">
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save Hospital</button>
+    </form>
+    <div id="msg" class="mt-4 text-green-600 font-semibold hidden">✅ Hospital Saved!</div>
+
+    <!-- 🔍 Search & Export -->
+    <div class="mt-10 flex flex-wrap justify-between items-center gap-4">
+      <input type="text" id="searchInput" placeholder="🔍 Search hospitals..." class="w-full md:w-1/2 border px-3 py-2 rounded">
+      <button onclick="exportCSV()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">⬇ Export CSV</button>
+    </div>
+
+    <!-- 📃 Hospital List -->
+    <h2 class="text-xl font-bold mt-10 mb-4">📋 All Hospitals</h2>
+    <div id="hospitalList" class="space-y-4"></div>
+  </div>
+
+  <script>
+    if (localStorage.getItem("isAdmin") !== "true") {
+      window.location.href = "admin-login.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("isAdmin");
+      window.location.href = "admin-login.html";
+    });
+
+    let hospitals = JSON.parse(localStorage.getItem("hospitals")) || [];
+
+    const hospitalForm = document.getElementById("hospitalForm");
+    const msg = document.getElementById("msg");
+    const editIndex = document.getElementById("editIndex");
+    const searchInput = document.getElementById("searchInput");
+
+    hospitalForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const newHospital = {
+        name: document.getElementById("hName").value.trim(),
+        district: document.getElementById("hDistrict").value.trim(),
+        type: document.querySelector('input[name="hType"]:checked').value,
+        contact: document.getElementById("hContact").value.trim(),
+        address: document.getElementById("hAddress").value.trim(),
+        map: document.getElementById("hMap").value.trim()
+      };
+
+      if (editIndex.value !== "") {
+        hospitals[editIndex.value] = newHospital;
+        editIndex.value = "";
+      } else {
+        hospitals.push(newHospital);
+      }
+
+      localStorage.setItem("hospitals", JSON.stringify(hospitals));
+      hospitalForm.reset();
+      msg.classList.remove("hidden");
+      setTimeout(() => msg.classList.add("hidden"), 3000);
+      renderHospitals();
+    });
+
+    function renderHospitals() {
+      const list = document.getElementById("hospitalList");
+      list.innerHTML = "";
+      const query = searchInput.value.toLowerCase();
+      const filtered = hospitals.filter(h =>
+        h.name.toLowerCase().includes(query) ||
+        h.district.toLowerCase().includes(query) ||
+        h.type.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0) {
+        list.innerHTML = "<p class='text-gray-500'>No hospitals found.</p>";
+        return;
+      }
+
+      filtered.forEach((h, index) => {
+        const item = document.createElement("div");
+        item.className = "border p-4 rounded shadow bg-white";
+        item.innerHTML = `
+          <h3 class="text-lg font-bold">${h.name} (${h.type})</h3>
+          <p><strong>District:</strong> ${h.district}</p>
+          <p><strong>Contact:</strong> ${h.contact}</p>
+          <p><strong>Address:</strong> ${h.address}</p>
+          <a href="${h.map}" target="_blank" class="text-blue-600 underline">🌐 View on Map</a><br>
+          <button onclick="editHospital(${index})" class="mt-2 bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">✏️ Edit</button>
+          <button onclick="deleteHospital(${index})" class="mt-2 ml-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">🗑️ Delete</button>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    function deleteHospital(index) {
+      if (confirm("Are you sure you want to delete this hospital?")) {
+        hospitals.splice(index, 1);
+        localStorage.setItem("hospitals", JSON.stringify(hospitals));
+        renderHospitals();
+      }
+    }
+
+    function editHospital(index) {
+      const h = hospitals[index];
+      document.getElementById("hName").value = h.name;
+      document.getElementById("hDistrict").value = h.district;
+      document.querySelector(`input[name="hType"][value="${h.type}"]`).checked = true;
+      document.getElementById("hContact").value = h.contact;
+      document.getElementById("hAddress").value = h.address;
+      document.getElementById("hMap").value = h.map;
+      editIndex.value = index;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function exportCSV() {
+      let csv = "Name,District,Type,Contact,Address,Map Link\n";
+      hospitals.forEach(h => {
+        csv += `"${h.name}","${h.district}","${h.type}","${h.contact}","${h.address}","${h.map}"\n`;
+      });
+      const blob = new Blob([csv], { type: "text/csv" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "hospitals.csv";
+      link.click();
+    }
+
+    searchInput.addEventListener("input", renderHospitals);
+    renderHospitals();
+  </script>
+</body>
+</html>

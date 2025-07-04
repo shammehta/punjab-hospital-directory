@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login | Punjab Health Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white shadow-lg rounded-lg p-8 max-w-sm w-full">
+    <h2 class="text-2xl font-bold text-center mb-6">🔐 Admin Login</h2>
+    
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Admin Email</label>
+        <input type="email" id="email" class="w-full border px-3 py-2 rounded mt-1" required>
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Password</label>
+        <div class="relative">
+          <input type="password" id="password" class="w-full border px-3 py-2 rounded mt-1 pr-10" required>
+          <button type="button" onclick="togglePassword()" class="absolute top-2 right-2 text-sm text-blue-500">👁️</button>
+        </div>
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+      <p id="error" class="text-red-500 text-sm text-center hidden mt-2">❌ Invalid credentials</p>
+    </form>
+  </div>
+
+  <script>
+    const ADMIN_EMAIL = "shammehta08@gmail.com";
+    const ADMIN_PASSWORD = "Sh@amMeht@@2025";
+    const MAX_ATTEMPTS = 5;
+    let attempts = 0;
+
+    function togglePassword() {
+      const pass = document.getElementById("password");
+      pass.type = pass.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const error = document.getElementById("error");
+
+      if (attempts >= MAX_ATTEMPTS) {
+        error.textContent = "🚫 Too many failed attempts. Try again later.";
+        error.classList.remove("hidden");
+        return;
+      }
+
+      if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+        localStorage.setItem("isAdmin", "true");
+        window.location.href = "admin-panel.html";
+      } else {
+        attempts++;
+        error.textContent = `❌ Invalid credentials. Attempts left: ${MAX_ATTEMPTS - attempts}`;
+        error.classList.remove("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

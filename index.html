@@ -1,0 +1,5468 @@
+ 
+ <!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Punjab Hospital Directory | Govt & Private Hospitals</title>
+  <meta name="title" content="Punjab Hospital Directory | Govt & Private Hospitals">
+  <meta name="description" content="Find government and private hospitals in Punjab by district and specialty. View emergency contact info, map directions, and hospital ratings.">
+  <meta name="keywords" content="Punjab Hospital Directory, Govt Hospitals Punjab, Private Hospitals Punjab, Emergency Hospitals, Hospital Ratings Punjab">
+  <meta name="author" content="Punjab Health Team">
+  <link rel="canonical" href="https://www.punjabhospitals.in/" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.punjabhospitals.in/">
+  <meta property="og:title" content="Punjab Hospital Directory | Govt & Private Hospitals">
+  <meta property="og:description" content="Search hospitals in Punjab by name, district, or emergency type. See ratings, reviews, and map locations.">
+  <meta property="og:image" content="https://www.punjabhospitals.in/og-preview.jpg">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.punjabhospitals.in/">
+  <meta name="twitter:title" content="Punjab Hospital Directory">
+  <meta name="twitter:description" content="Find top hospitals across Punjab with contact details, specialties, maps, and more.">
+  <meta name="twitter:image" content="https://www.punjabhospitals.in/twitter-preview.jpg">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- robots.txt and sitemap -->
+  <meta name="robots" content="index, follow">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- CSS and Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+   body { font-family: 'Inter', sans-serif; transition: all 0.3s ease; }
+   body.dark { background-color: #121212; color: #fff; }
+   .star { color: #fbbf24; }
+   .autocomplete-items {
+     position: absolute;
+     border: 1px solid #d4d4d4;
+     border-bottom: none;
+     border-top: none;
+     z-index: 99;
+     top: 100%;
+     left: 0;
+     right: 0;
+     max-height: 200px;
+     overflow-y: auto;
+     background: white;
+     color: black;
+   }
+   .autocomplete-items div {
+     padding: 10px;
+     cursor: pointer;
+     border-bottom: 1px solid #d4d4d4;
+   }
+   .autocomplete-items div:hover {
+     background-color: #e9e9e9;
+   }
+  </style>
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ Google Search Console Meta Tag -->
+  <meta name="google-site-verification" content="wAZVXvdky5uPj4Fq7tYvpbyU7QVPepPWU5RUTLnI8u0" />
+
+  <!-- ✅ Google Analytics Tag (single, correct one) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHS8HSWXLQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KHS8HSWXLQ');
+  </script>
+</head>
+
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+ 
+
+    <!-- Header with Emergency, Share & Dark Mode Toggle -->
+ <header class="bg-white dark:bg-gray-900 shadow sticky top-0 z-50 flex flex-wrap md:flex-nowrap items-center justify-between px-4 py-3">
+  <div class="flex items-center space-x-2">
+    <i class="fas fa-hospital-symbol text-blue-600 text-xl"></i>
+    <span class="text-xl font-semibold text-gray-800 dark:text-white">Punjab Health Directory</span>
+  </div>
+
+  <div class="flex items-center space-x-3 mt-3 md:mt-0">
+    <!-- Emergency Button -->
+    <button
+      id="emergencyBtn"
+      class="bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 text-sm"
+      title="Show Nearest Emergency Hospitals"
+    >
+      🆘 Emergency Nearby
+    
+    </button>
+    <a href="articles.html"
+   class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 text-sm ml-3"
+   title="Read Health Articles">
+   📰 Articles
+</a>
+
+    <!-- Share on WhatsApp -->
+    <a
+      href="https://wa.me/?text=Check%20out%20Punjab%20Health%20Directory%20https%3A%2F%2Fpunjabhospitals.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded shadow text-sm"
+      title="Share on WhatsApp"
+    >
+      📱 Share
+    </a>
+
+    <div class="flex items-center space-x-2">
+      <span class="text-sm text-gray-800 dark:text-gray-200">Dark Mode</span>
+      <button
+        id="darkToggle"
+        class="bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-3 py-1 rounded-full text-sm transition"
+        title="Toggle Dark Mode"
+      >
+        🌙
+      </button>
+    </div>
+
+      <!-- Yahan Admin Login Button add karen -->
+     <a href="admin-login.html" id="adminLoginBtn"
+   class="bg-gray-800 text-white px-3 py-2 rounded hover:bg-gray-700 text-sm ml-3"
+   title="Admin Login">
+   🔐 Admin
+</a>
+
+  </div>
+</header>
+
+
+ <script>
+  const toggleBtn = document.getElementById("darkToggle");
+  const rootBody = document.body;
+
+  function updateDarkIcon(isDark) {
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    const isDark = rootBody.classList.toggle("dark");
+    localStorage.setItem("darkMode", isDark);
+    updateDarkIcon(isDark);
+  });
+
+  // On page load
+  const isDarkPref = localStorage.getItem("darkMode") === "true";
+  if (isDarkPref) rootBody.classList.add("dark");
+  updateDarkIcon(isDarkPref);
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="bg-blue-100 dark:bg-gray-800 px-6 py-12 md:py-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-900 dark:text-white leading-snug">
+          Find The Best<br />Hospitals in Punjab
+        </h1>
+        <p class="text-gray-700 dark:text-gray-300 mt-3 text-sm md:text-base">
+           Explore top-rated government and private hospitals in Punjab for emergency and general healthcare services.
+        </p>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img
+          src="https://i.imgur.com/KbR7aWW.png"
+          alt="Doctor Illustration"
+          class="w-40 sm:w-48 md:w-64 lg:w-72 h-auto max-w-full rounded-xl shadow-lg object-contain"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filters with Mic inside input -->
+  <section class="px-6 py-6 max-w-7xl mx-auto relative">
+    <form id="searchForm" class="flex flex-col md:flex-row gap-4 relative" onsubmit="return false;" autocomplete="off">
+      <div class="relative flex-grow">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search hospitals by name..."
+          class="w-full border px-3 py-2 rounded text-sm dark:bg-gray-900 dark:text-white"
+        />
+        <button
+          id="micButton"
+          type="button"
+          class="absolute right-2 top-2.5 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+          title="Voice Search"
+        >
+          🎤
+        </button>
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+      </div>
+
+      <select
+        id="districtFilter"
+        class="border px-2 py-2 rounded text-sm dark:bg-gray-900 dark:text-white"
+        aria-label="Filter by district"
+      >
+        <option value="">All Districts</option>
+<option value="Amritsar">Amritsar</option>
+<option value="Barnala">Barnala</option>
+<option value="Bathinda">Bathinda</option>
+<option value="Faridkot">Faridkot</option>
+<option value="Fatehgarh Sahib">Fatehgarh Sahib</option>
+<option value="Fazilka">Fazilka</option>
+<option value="Ferozepur">Ferozepur</option>
+<option value="Gurdaspur">Gurdaspur</option>
+<option value="Hoshiarpur">Hoshiarpur</option>
+<option value="Jalandhar">Jalandhar</option>
+<option value="Kapurthala">Kapurthala</option>
+<option value="Ludhiana">Ludhiana</option>
+<option value="Malerkotla">Malerkotla</option>
+<option value="Mansa">Mansa</option>
+<option value="Moga">Moga</option>
+<option value="Mohali">Mohali</option>
+<option value="Muktsar">Muktsar</option>
+<option value="Nawanshahr">Nawanshahr</option>
+<option value="Pathankot">Pathankot</option>
+<option value="Patiala">Patiala</option>
+<option value="Ropar">Ropar</option>
+<option value="Sangrur">Sangrur</option>
+<option value="Tarn Taran">Tarn Taran</option>
+ 
+      </select>
+      <select
+        id="typeFilter"
+        class="border px-2 py-2 rounded text-sm dark:bg-gray-900 dark:text-white"
+        aria-label="Filter by hospital type"
+      >
+        <option value="">All Types</option>
+        <option value="Government">Government</option>
+        <option value="Private">Private</option>
+      </select>
+      <button
+        id="searchButton"
+        type="submit"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
+      >
+        Search
+      </button>
+    </form>
+  </section>
+
+  <!-- Hospital List -->
+  <section class="px-6 py-8 max-w-7xl mx-auto">
+    <h2 class="text-xl font-semibold text-blue-800 dark:text-white mb-6">🏥 Hospitals Found</h2>
+    <div id="hospitalList" class="grid gap-4 md:grid-cols-2"></div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+   <a href="https://wa.me/?text=https://yourwebsite.com"
+   class="fixed bottom-4 left-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50 text-sm"
+   target="_blank"
+   title="Share Punjab Health Directory on WhatsApp"
+>
+   📤 Share
+</a>
+
+
+  <!-- Offline Alert -->
+  <div
+    id="offlineAlert"
+    class="hidden fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50 text-sm"
+  >
+    🚫 You are offline. Please check your internet connection.
+  </div>
+
+  <!-- Terms & Privacy Section -->
+   <!-- Footer Section -->
+<footer class="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-10 px-6 mt-10">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-400 mb-4">About Punjab Hospital Directory</h3>
+      <p class="text-sm leading-relaxed">
+        Punjab Hospital Directory is a public service platform developed by Sham Mehta to help residents of Punjab find trusted government and private hospitals, emergency contacts, and health information easily. We aim to provide accurate and timely information free of cost to assist in urgent medical needs.
+      </p>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div>
+      <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-400 mb-4">Terms & Conditions</h3>
+      <ul class="list-disc list-inside text-sm leading-relaxed space-y-2">
+        <li>This website is for informational purposes only and does not substitute professional medical advice.</li>
+        <li>We strive to provide accurate hospital details but do not guarantee completeness or accuracy of the data.</li>
+        <li>Users must verify hospital information independently before relying on it for medical emergencies.</li>
+        <li>Unauthorized use, duplication, or misuse of data from this website is strictly prohibited.</li>
+        <li>By using this website, you agree not to misuse emergency contact numbers or submit false information.</li>
+        <li>We reserve the right to update or modify these terms without prior notice.</li>
+      </ul>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div>
+      <h3 class="text-xl font-semibold text-blue-800 dark:text-blue-400 mb-4">Privacy Policy</h3>
+      <p class="text-sm leading-relaxed mb-2">
+        We respect your privacy and do not collect or store any personally identifiable information from users.
+      </p>
+      <p class="text-sm leading-relaxed mb-2">
+        Any data input, including voice input for search, remains on your device and is not transmitted or stored externally.
+      </p>
+      <p class="text-sm leading-relaxed mb-2">
+        This website uses local storage only to enhance user experience such as visit counts or preferences. No cookies or trackers are used.
+      </p>
+      <p class="text-sm leading-relaxed">
+        For questions about privacy, please contact us at <a href="mailto:contact@punjabhospitalguide08.com" class="text-blue-600 hover:underline">contact@punjabhospitalguide08.com</a>.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto text-center mt-8 text-xs text-gray-500 dark:text-gray-600">
+    &copy; 2025 Punjab Hospital Directory. All rights reserved.
+  </div>
+</footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+// Default hospitals (fallback data)
+const defaultHospitals = [
+  { name: "Rajindra Hospital", district: "Patiala", type: "Government", contact: "0175-221-2000", address: "Patiala, Punjab", location: "https://maps.app.goo.gl/BucoeY3kiV6XRjzAA", rating: 4.5, lat: 30.3313, lng: 76.4040 },
+  { name: "Deep Hospital", district: "Ludhiana", type: "Private", contact: "0161-230-1234", address: "Ludhiana, Punjab", location: "https://goo.gl/maps/5rA5VXmYyrx", rating: 4.0, lat: 30.9000, lng: 75.8573 },
+  { name: "Amritsar Civil Hospital", district: "Amritsar", type: "Government", contact: "0183-222-2222", address: "Amritsar, Punjab", location: "https://goo.gl/maps/M9yhePWzqLp", rating: 4.2, lat: 31.6340, lng: 74.8723 },
+  { name: "Jalandhar Central Hospital", district: "Jalandhar", type: "Private", contact: "0181-123-4567", address: "Jalandhar, Punjab", location: "https://goo.gl/maps/3hbUvCjvLxQ2", rating: 3.8, lat: 31.3260, lng: 75.5762 },
+  { name: "Faridkot General Hospital", district: "Faridkot", type: "Government", contact: "01639-220111", address: "Faridkot, Punjab", location: "https://goo.gl/maps/2PjBxQL3Zho", rating: 4.1, lat: 30.6765, lng: 74.7557 },
+  { name: "Faridkot General Hospital", district: "Faridkot", type: "Government", contact: "01639-220111", address: "Faridkot, Punjab", location: "https://goo.gl/maps/2PjBxQL3Zho", rating: 4.1, lat: 30.6765, lng: 74.7557 },
+  {
+    name: "Sanjeevani Hospital",
+    address: "Tarn Taran City",
+    district: "Tarn Taran",
+    type: "Private",
+    location: "https://www.google.com/maps/search/Tarn Taran City"
+  }, 
+   {
+    name: "CHC Dudhan Sadhan",
+    address: "Main Road, Village Dudhan Sadhan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Main+Road,+Village+Dudhan+Sadhan,+Patiala"
+  },
+  {
+    name: "CHC Shutrana",
+    address: "Shutrana–Bhanaura Road, Tehsil Patran, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147103",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Shutrana-Bhanaura+Road,+Patran,+Patiala"
+  },
+  {
+    name: "CHC Tripari",
+    address: "ITI Chowk, Tripuri Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/ITI+Chowk,+Tripuri+Town,+Patiala"
+  },
+  {
+    name: "CHC Ghanaur",
+    address: "Near Railway Station, Ghanaur, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147301",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Railway+Station,+Ghanaur,+Patiala"
+  },
+  {
+    name: "Gian Sagar Hospital",
+    address: "Ram Nagar, Banur, Tehsil Rajpura, Distt. Patiala, Punjab",
+    district: "Patiala",
+    pincode: "140601",
+    type: "Private",
+    contact: "01762-520006",
+    location: "https://www.google.com/maps/search/Ram+Nagar,+Banur,+Patiala+140601"
+  },
+  {
+    name: "Arora Hospital",
+    address: "Leela Bhawan, Bhupindra Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Leela+Bhawan,+Bhupindra+Road,+Patiala"
+  },
+  {
+    name: "Bansal Child Care Hospital",
+    address: "22 No. Phatak, Model Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "0175-5000123",
+    location: "https://www.google.com/maps/search/22+No.+Phatak,+Model+Town,+Patiala"
+  },
+  {
+    name: "Bindi Nursing Home",
+    address: "Arya Samaj Chowk, Near Sirhindi Gate, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Arya+Samaj+Chowk,+Near+Sirhindi+Gate,+Patiala"
+  },
+  {
+    name: "Faqir Chand Roop Rai Memorial NH",
+    address: "Near Urban Estate Phase-1, Nabha Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Nabha+Road,+Urban+Estate+Phase-1,+Patiala"
+  },
+  {
+    name: "Dashmesh Hospital",
+    address: "Badungar Road, Near Leela Bhawan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Badungar+Road,+Near+Leela+Bhawan,+Patiala"
+  },
+  {
+    name: "Patiala Heart Institute",
+    address: "Lower Mall Road, Near Sheranwala Gate, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Lower+Mall+Road,+Near+Sheranwala+Gate,+Patiala"
+  },
+  {
+    name: "Amar Hospital Patiala",
+    address: "Opposite Modi College, Lower Mall, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Opposite+Modi+College,+Lower+Mall,+Patiala"
+  },
+  {
+    name: "Sawhney Hospital & Maternity Home",
+    address: "Adalat Bazar, Near Kali Devi Mandir, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Adalat+Bazar,+Near+Kali+Devi+Mandir,+Patiala"
+  },
+  {
+    name: "Janak Surgicare & Ankur Urology",
+    address: "20 No. Phatak, Model Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/20+No.+Phatak,+Model+Town,+Patiala"
+  },
+  {
+    name: "Guru Nanak Hospital Rajpura",
+    address: "Near Bus Stand, Rajpura, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "140401",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rajpura,+Patiala"
+  },
+  {
+    name: "Bhatia Neuro & Multispeciality Hospital",
+    address: "Sirhind Road, Near Passi Chowk, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sirhind+Road,+Near+Passi+Chowk,+Patiala"
+  },
+  {
+    name: "Dr. Manpreet’s Global Eye Hospital",
+    address: "Leela Bhawan, Bhupindra Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Leela+Bhawan,+Bhupindra+Road,+Patiala"
+  },
+  {
+    name: "Dr. Aniljit Child Care",
+    address: "Bhadson Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhadson+Road,+Patiala"
+  },
+  {
+    name: "Chaman Hospital",
+    address: "22 No. Phatak, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/22+No.+Phatak,+Patiala"
+  },
+  {
+    name: "Rajan Clinic & Hospital",
+    address: "Near Urban Estate Phase-2, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+
+    location: "https://www.google.com/maps/search/Near+Urban+Estate+Phase-2,+Patiala"
+  },
+  {
+    name: "Darshnidhi Health Care",
+    address: "Bhadson Road, Near Govt Press, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhadson+Road,+Near+Govt+Press,+Patiala"
+  },
+  {
+    name: "Healthy Baby Hospital",
+    address: "Leela Bhawan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Leela+Bhawan,+Patiala"
+  },
+  {
+    name: "Vardaan Multispeciality & Trauma Centre",
+    address: "Nabha Road, Near Urban Estate, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Nabha+Road,+Near+Urban+Estate,+Patiala"
+  },
+  {
+    name: "AP Healthcare & Trauma Centre",
+    address: "Opposite Moti Bagh Palace, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Opposite+Moti+Bagh+Palace,+Patiala"
+  },
+  {
+    name: "Neelam Hospital",
+    address: "Model Town, Near 22 No. Phatak, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Near+22+No.+Phatak,+Patiala"
+  },
+  {
+    name: "Jeevan Multispecialty Hospital",
+    address: "Near Phatak No. 22, Model Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Phatak+No.+22,+Model+Town,+Patiala"
+  },
+  {
+    name: "Dinesh Children Hospital",
+    address: "Model Town, Near Arya Samaj, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Near+Arya+Samaj,+Patiala"
+  },
+  {
+    name: "Dr. Bharti’s Medikidz Hospital",
+    address: "Urban Estate Phase-1, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-1,+Patiala"
+  },
+  {
+    name: "Garg Children Hospital",
+    address: "Rajpura Road, Near 21 No. Phatak, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rajpura+Road,+Near+21+No.+Phatak,+Patiala"
+  },
+  
+  {
+    name: "Star Medicity Hospital",
+    address: "Near Leela Bhawan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Leela+Bhawan,+Patiala"
+  },
+  {
+    name: "Galaxy Hospital",
+    address: "Urban Estate Phase‑2, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-2,+Patiala"
+  },
+  {
+    name: "Park Hospital",
+    address: "Opposite Rajindra Hospital Gate No. 2, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Opposite+Rajindra+Hospital+Gate+No.+2,+Patiala"
+  },
+  {
+    name: "Amaira Plastic Surgery Hospital",
+    address: "Model Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Patiala"
+  },
+  {
+    name: "Pride Healthcare Hospital",
+    address: "Rajpura Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rajpura+Road,+Patiala"
+  },
+  {
+    name: "Nawal Hospital",
+    address: "Bhadson Road, Near Govt Press, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhadson+Road,+Near+Govt+Press,+Patiala"
+  },
+  {
+    name: "Longia Eye Hospital",
+    address: "Tripuri Town, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tripuri+Town,+Patiala"
+  },
+  {
+    name: "Guru Nanak Mehar Hans Eye Hospital",
+    address: "Model Town Extension, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town+Extension,+Patiala"
+  },
+  {
+    name: "Phull Neuro Hospital",
+    address: "Rajpura Road, Near Bhakhra Nangal Office, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rajpura+Road,+Near+Bhakhra+Nangal+Office,+Patiala"
+  },
+  {
+    name: "Prime Multispeciality Hospital",
+    address: "Urban Estate Phase‑2, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-2,+Patiala"
+  },
+  {
+    name: "Excel Healthcare",
+    address: "Rajpura Road, Near Fountain Chowk, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rajpura+Road,+Near+Fountain+Chowk,+Patiala"
+  },
+  {
+    name: "Mehar Hospital",
+    address: "Near Leela Bhawan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Leela+Bhawan,+Patiala"
+  },
+  {
+    name: "Sahara Multispeciality Hospital",
+    address: "Nabha Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Nabha+Road,+Patiala"
+  },
+  {
+    name: "Simrita Nursing Home",
+    address: "Urban Estate Phase‑1, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-1,+Patiala"
+  },
+  {
+    name: "Dr. G.S. Randhawa Eye Hospital",
+    address: "Near Adalat Bazar, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Adalat+Bazar,+Patiala"
+  },
+  {
+    name: "Garg Mission Hospital",
+    address: "Adalat Bazar, Near Kali Devi Temple, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Adalat+Bazar,+Near+Kali+Devi+Temple,+Patiala"
+  },
+  {
+    name: "Vardhman Mahaveer Health Care",
+    address: "Urban Estate Phase‑2, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-2,+Patiala"
+  },
+  {
+    name: "Bhagwan Healthcare Centre",
+    address: "Rajpura Road, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rajpura+Road,+Patiala"
+  },
+  {
+    name: "Sanjeevani Nursing Home",
+    address: "Urban Estate Phase‑1, Near Leela Bhawan, Patiala, Punjab",
+    district: "Patiala",
+    pincode: "147001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Urban+Estate+Phase-1,+Near+Leela+Bhawan,+Patiala"
+  },
+  
+  {
+    name: "District Hospital Faridkot",
+    address: "Near Bus Stand, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Government",
+    contact: "99880-20033",  
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Faridkot+151203"
+  },
+  {
+    name: "Civil Hospital Faridkot",
+    address: "Civil Lines, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Government",
+    contact: "98146-52880",  
+    location: "https://www.google.com/maps/search/Civil+Lines,+Faridkot+151203"
+  },
+  {
+    name: "CHC Kotkapura",
+    address: "Kotkapura, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151204",
+    type: "Government",
+    contact: "98150-50206",  
+    location: "https://www.google.com/maps/search/Kotkapura,+Faridkot+151204"
+  },
+  {
+    name: "CHC Jaitu",
+    address: "Jaitu, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151202",
+    type: "Government",
+    contact: "7600000523",  
+    location: "https://www.google.com/maps/search/Jaitu,+Faridkot+151202"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Faridkot City, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Faridkot+City,+Faridkot+151203"
+  },
+  {
+    name: "Ganga Ram Hospital",
+    address: "Faridkot City, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Faridkot+City,+Faridkot+151203"
+  },
+  {
+    name: "Karamveer Multispeciality Hospital",
+    address: "Near Bus Stand, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Faridkot+151203"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Faridkot City, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Faridkot+City,+Faridkot+151203"
+  },
+  {
+    name: "Sukh Hospital",
+    address: "Kotkapura, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151204",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kotkapura,+Faridkot+151204"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Jaitu, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151202",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jaitu,+Faridkot+151202"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Faridkot City, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Faridkot+City,+Faridkot+151203"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Near Civil Lines, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Civil+Lines,+Faridkot+151203"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Faridkot City, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Faridkot+City,+Faridkot+151203"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Near Bus Stand, Faridkot, Punjab",
+    district: "Faridkot",
+    pincode: "151203",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Faridkot+151203"
+  },
+  {
+    name: "District Hospital Firozepur",
+    address: "Near Bus Stand, Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Firozepur+152002"
+  },
+  {
+    name: "Civil Hospital Firozepur",
+    address: "Civil Lines, Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Firozepur+152002"
+  },
+  {
+    name: "CHC Makhu",
+    address: "Makhu, Firozepur district, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Makhu,+Firozepur+152002"
+  },
+  {
+    name: "CHC Talwandi Bhai",
+    address: "Talwandi Bhai, Firozepur district, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Talwandi+Bhai,+Firozepur+152002"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Firozepur+City,+Punjab+152002"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Near Civil Lines, Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Civil+Lines,+Firozepur+152002"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Firozepur+City,+Punjab+152002"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Firozepur+City,+Punjab+152002"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Near Bus Stand, Firozepur City, Punjab",
+    district: "Firozepur",
+    pincode: "152002",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Firozepur+152002"
+  },
+  {
+    name: "District Hospital Jalandhar",
+    address: "Civil Lines, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Government",
+    contact: "0181-2221804",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Jalandhar+144001"
+  },
+  {
+    name: "Civil Hospital Jalandhar",
+    address: "Near Bus Stand, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Government",
+    contact: "0181-2233557",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Jalandhar+144001"
+  },
+  {
+    name: "CHC Kartarpur",
+    address: "Kartarpur, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144801",
+    type: "Government",
+    contact: "0181-2502839",
+    location: "https://www.google.com/maps/search/Kartarpur,+Jalandhar+144801"
+  },
+  {
+    name: "CHC Adampur",
+    address: "Adampur, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144101",
+    type: "Government",
+    contact: "0181-2253009",
+    location: "https://www.google.com/maps/search/Adampur,+Jalandhar+144101"
+  },
+  {
+    name: "CHC Nakodar",
+    address: "Nakodar, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144040",
+    type: "Government",
+    contact: "01821-222222",
+    location: "https://www.google.com/maps/search/Nakodar,+Jalandhar+144040"
+  },
+  {
+    name: "CHC Phillaur",
+    address: "Phillaur, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144410",
+    type: "Government",
+    contact: "01826-222111",
+    location: "https://www.google.com/maps/search/Phillaur,+Jalandhar+144410"
+  },
+  {
+    name: "CHC Dhilwan",
+    address: "Dhilwan, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144022",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dhilwan,+Jalandhar+144022"
+  },
+  {
+    name: "CHC Jandiala Guru",
+    address: "Jandiala Guru, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144002",
+    type: "Government",
+    contact: "0181-2471234",
+    location: "https://www.google.com/maps/search/Jandiala+Guru,+Jalandhar+144002"
+  },
+  {
+    name: "CHC Moranwali",
+    address: "Moranwali, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144022",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Moranwali,+Jalandhar+144022"
+  },
+  {
+    name: "CHC Bhogpur",
+    address: "Bhogpur, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144201",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhogpur,+Jalandhar+144201"
+  },
+  {
+    name: "CHC Lohian",
+    address: "Lohian, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144804",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Lohian,+Jalandhar+144804"
+  },
+  {
+    name: "CHC Shankar",
+    address: "Shankar, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144025",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Shankar,+Jalandhar+144025"
+  },
+  {
+    name: "CHC Nurmahal",
+    address: "Nurmahal, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144039",
+    type: "Government",
+    contact: "01821-255646",
+    location: "https://www.google.com/maps/search/Nurmahal,+Jalandhar+144039"
+  },
+  {
+    name: "CHC Sunam",
+    address: "Sunam, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "148028",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sunam,+Jalandhar+148028"
+  },
+  {
+    name: "CHC Talwandi Bhai",
+    address: "Talwandi Bhai, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144101",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Talwandi+Bhai,+Jalandhar+144101"
+  },
+  {
+    name: "CHC Goraya",
+    address: "Goraya, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144521",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Goraya,+Jalandhar+144521"
+  },
+  {
+    name: "CHC Jalandhar Cantt",
+    address: "Jalandhar Cantonment, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144005",
+    type: "Government",
+    contact: "0181-2233017",
+    location: "https://www.google.com/maps/search/Jalandhar+Cantonment,+Jalandhar+144005"
+  },
+  {
+    name: "Guru Nanak Dev Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "0181-2222396",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Santokh Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "K.D. Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Sukhmani Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Shanti Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Guru Harkrishan Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "City Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "M.K. Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Mohan Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Sanjeevani Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Alpha Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Anand Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  {
+    name: "Bhagat Hospital",
+    address: "Jalandhar City, Jalandhar, Punjab",
+    district: "Jalandhar",
+    pincode: "144001",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar+144001"
+  },
+  
+  {
+    name: "Bawa Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "City Eye Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Deep Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Dev Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Divine Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Dr. Singh Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Fair Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Fortis Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-5055000",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Goyal Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Guru Nanak Eye Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2223340",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Harman Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Hitech Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "J.P. Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Jaswant Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Kalyan Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Kamal Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Kiran Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Krishna Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Life Care Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Maan Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Max Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-5051500",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Mohan Dai Oswal Cancer Centre",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2224445",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Neel Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "New Life Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Nirmal Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Pawan Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2221234",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Satnam Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Shakti Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2232323",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Shiv Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Shree Balaji Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2229876",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Shree Krishna Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Shree Ram Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  {
+    name: "Simran Hospital",
+    address: "Jalandhar City, Jalandhar",
+    district: "Jalandhar",
+    type: "Private",
+    contact: "0181-2221111",
+    location: "https://www.google.com/maps/search/Jalandhar+City,+Jalandhar"
+  },
+  
+  {
+    name: "District Hospital Mansa",
+    address: "Civil Lines, Mansa",
+    district: "Mansa",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Mansa"
+  },
+  {
+    name: "Civil Hospital Mansa",
+    address: "Near Bus Stand, Mansa",
+    district: "Mansa",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Mansa"
+  },
+  {
+    name: "CHC Sardulgarh",
+    address: "Sardulgarh, Mansa",
+    district: "Mansa",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sardulgarh,+Mansa"
+  },
+  {
+    name: "CHC Jhunir",
+    address: "Jhunir, Mansa",
+    district: "Mansa",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jhunir,+Mansa"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  {
+    name: "Santokh Hospital",
+    address: "Mansa City, Mansa",
+    district: "Mansa",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mansa+City,+Mansa"
+  },
+  
+  {
+    name: "District Hospital Sangrur",
+    address: "Civil Lines, Sangrur",
+    district: "Sangrur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Sangrur"
+  },
+  {
+    name: "Civil Hospital Sangrur",
+    address: "Near Bus Stand, Sangrur",
+    district: "Sangrur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Sangrur"
+  },
+  {
+    name: "CHC Lehragaga",
+    address: "Lehragaga, Sangrur",
+    district: "Sangrur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Lehragaga,+Sangrur"
+  },
+  {
+    name: "CHC Dirba",
+    address: "Dirba, Sangrur",
+    district: "Sangrur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dirba,+Sangrur"
+  },
+  {
+    name: "CHC Bhawanigarh",
+    address: "Bhawanigarh, Sangrur",
+    district: "Sangrur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhawanigarh,+Sangrur"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Santokh Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Sukhmani Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Shanti Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Rajinder Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "City Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Life Care Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Guru Harkrishan Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Simran Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Smile Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Sohal Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+  {
+    name: "Soni Hospital",
+    address: "Sangrur City, Sangrur",
+    district: "Sangrur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sangrur+City,+Sangrur"
+  },
+
+  {
+    name: "District Hospital Barnala",
+    address: "Civil Lines, Barnala",
+    district: "Barnala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Barnala"
+  },
+  {
+    name: "Civil Hospital Barnala",
+    address: "Near Bus Stand, Barnala",
+    district: "Barnala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Barnala"
+  },
+  {
+    name: "CHC Tapa",
+    address: "Tapa, Barnala",
+    district: "Barnala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tapa,+Barnala"
+  },
+  {
+    name: "CHC Mehal Kalan",
+    address: "Mehal Kalan, Barnala",
+    district: "Barnala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mehal+Kalan,+Barnala"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "Simran Hospital",
+    address: "Barnala City, Barnala",
+    district: "Barnala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Barnala+City,+Barnala"
+  },
+  {
+    name: "District Hospital Fatehgarh Sahib",
+    address: "Civil Lines, Fatehgarh Sahib",
+    district: "Fatehgarh Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Fatehgarh+Sahib"
+  },
+  {
+    name: "Civil Hospital Fatehgarh Sahib",
+    address: "Near Bus Stand, Fatehgarh Sahib",
+    district: "Fatehgarh Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Fatehgarh+Sahib"
+  },
+  {
+    name: "CHC Sirhind",
+    address: "Sirhind, Fatehgarh Sahib",
+    district: "Fatehgarh Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sirhind,+Fatehgarh+Sahib"
+  },
+  {
+    name: "CHC Khamano",
+    address: "Khamano, Fatehgarh Sahib",
+    district: "Fatehgarh Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Khamano,+Fatehgarh+Sahib"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Fatehgarh Sahib City",
+    district: "Fatehgarh Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Fatehgarh+Sahib+City"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Fatehgarh Sahib City",
+    district: "Fatehgarh Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Fatehgarh+Sahib+City"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Fatehgarh Sahib City",
+    district: "Fatehgarh Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Fatehgarh+Sahib+City"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Fatehgarh Sahib City",
+    district: "Fatehgarh Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Fatehgarh+Sahib+City"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Fatehgarh Sahib City",
+    district: "Fatehgarh Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Fatehgarh+Sahib+City"
+  },
+  
+  {
+    name: "District Hospital Gurdaspur",
+    address: "Civil Lines, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Gurdaspur"
+  },
+  {
+    name: "Civil Hospital Gurdaspur",
+    address: "Near Bus Stand, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Gurdaspur"
+  },
+  {
+    name: "CHC Batala",
+    address: "Batala, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Batala,+Gurdaspur"
+  },
+  {
+    name: "CHC Dera Baba Nanak",
+    address: "Dera Baba Nanak, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dera+Baba+Nanak,+Gurdaspur"
+  },
+  {
+    name: "CHC Dhariwal",
+    address: "Dhariwal, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dhariwal,+Gurdaspur"
+  },
+  {
+    name: "CHC Kahnuwan",
+    address: "Kahnuwan, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kahnuwan,+Gurdaspur"
+  },
+  {
+    name: "CHC Qadian",
+    address: "Qadian, Gurdaspur",
+    district: "Gurdaspur",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Qadian,+Gurdaspur"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Sukhmani Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Shanti Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "City Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Life Care Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Guru Harkrishan Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Simran Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Smile Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Sohal Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Soni Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Teja Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Tulsi Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Usha Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  {
+    name: "Fort Hospital",
+    address: "Gurdaspur City",
+    district: "Gurdaspur",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdaspur+City"
+  },
+  
+  {
+    name: "District Hospital Kapurthala",
+    address: "Near Bus Stand, Kapurthala",
+    district: "Kapurthala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Kapurthala"
+  },
+  {
+    name: "Civil Hospital Kapurthala",
+    address: "Civil Lines, Kapurthala",
+    district: "Kapurthala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Kapurthala"
+  },
+  {
+    name: "CHC Sultanpur Lodhi",
+    address: "Sultanpur Lodhi, Kapurthala",
+    district: "Kapurthala",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sultanpur+Lodhi,+Kapurthala"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Kapurthala City, Kapurthala",
+    district: "Kapurthala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kapurthala+City,+Kapurthala"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Kapurthala City, Kapurthala",
+    district: "Kapurthala",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kapurthala+City,+Kapurthala"
+  },
+  
+  {
+    name: "District Hospital Moga",
+    address: "R569+MPP, New Town (Near Bus Stand), Moga, Punjab 142001",
+    district: "Moga",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/District+Hospital+Moga"
+  },
+  {
+    name: "Civil Hospital Moga",
+    address: "Civil Lines, Near Main Bazar, Moga, Punjab 142001",
+    district: "Moga",
+    type: "Government",
+    contact: "01636-220410, 98142-19110",
+    location: "https://www.google.com/maps/search/Civil+Hospital+Moga"
+  },
+  {
+    name: "CHC Nihal Singh Wala",
+    address: "Nihal Singh Wala, Moga, Punjab 142055",
+    district: "Moga",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/CHC+Nihal+Singh+Wala,+Moga"
+  },
+  {
+    name: "CHC Dharamkot",
+    address: "Dharamkot, Moga, Punjab 142001",
+    district: "Moga",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/CHC+Dharamkot,+Moga"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Baba+Deep+Singh+Hospital+Moga"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Balaji+Hospital+Moga"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Near Civil Lines, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sant+Hospital+Moga"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Raj+Hospital+Moga"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Near Bus Stand, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mahan+Hospital+Moga"
+  },
+  {
+    name: "Ganga Ram Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Ganga+Ram+Hospital+Moga"
+  },
+  {
+    name: "Karamveer Multispeciality Hospital",
+    address: "Near Bus Stand, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Karamveer+Multispeciality+Hospital+Moga"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Guru+Nanak+Hospital+Moga"
+  },
+  {
+    name: "Sukh Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sukh+Hospital+Moga"
+  },
+  {
+    name: "Janak Surgicare & Ankur Urology",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Janak+Surgicare+Moga"
+  },
+  {
+    name: "Star Medicity Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "01636-500665",
+    location: "https://www.google.com/maps/search/Star+Medicity+Hospital+Moga"
+  },
+  {
+    name: "Galaxy Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Galaxy+Hospital+Moga"
+  },
+  {
+    name: "Park Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Park+Hospital+Moga"
+  },
+  {
+    name: "Pride Healthcare Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Pride+Healthcare+Hospital+Moga"
+  },
+  {
+    name: "Neelam Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Neelam+Hospital+Moga"
+  },
+  {
+    name: "Longia Eye Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Longia+Eye+Hospital+Moga"
+  },
+  {
+    name: "Guru Nanak Mehar Hans Eye Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Guru+Nanak+Mehar+Hans+Eye+Hospital+Moga"
+  },
+  {
+    name: "Phull Neuro Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phull+Neuro+Hospital+Moga"
+  },
+  {
+    name: "Prime Multispeciality Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Prime+Multispeciality+Hospital+Moga"
+  },
+  {
+    name: "Excel Healthcare",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Excel+Healthcare+Moga"
+  },
+  {
+    name: "Sahara Multispeciality Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sahara+Multispeciality+Hospital+Moga"
+  },
+  {
+    name: "Simrita Nursing Home",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Simrita+Nursing+Home+Moga"
+  },
+  {
+    name: "Dr G.S. Randhawa Eye Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dr+G.S.+Randhawa+Eye+Hospital+Moga"
+  },
+  {
+    name: "Garg Mission Hospital",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Garg+Mission+Hospital+Moga"
+  },
+  {
+    name: "Vardhman Mahaveer Health Care",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Vardhman+Mahaveer+Health+Care+Moga"
+  },
+  {
+    name: "Bhagwan Healthcare Centre",
+    address: "Moga City, Moga",
+    district: "Moga",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bhagwan+Healthcare+Centre+Moga"
+  },
+  
+  {
+    name: "District Hospital Bathinda",
+    address: "Near Bus Stand, Bathinda",
+    district: "Bathinda",
+    type: "Government",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Bathinda"
+  },
+  {
+    name: "Civil Hospital Bathinda",
+    address: "Civil Lines, Bathinda",
+    district: "Bathinda",
+    type: "Government",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Bathinda"
+  },
+  {
+    name: "CHC Talwandi Sabo",
+    address: "Talwandi Sabo, Bathinda",
+    district: "Bathinda",
+    type: "Government",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Talwandi+Sabo,+Bathinda"
+  },
+  {
+    name: "CHC Maur",
+    address: "Maur, Bathinda",
+    district: "Bathinda",
+    type: "Government",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Maur,+Bathinda"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Near Civil Lines, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Civil+Lines,+Bathinda"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Near Bus Stand, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Bathinda"
+  },
+  {
+    name: "Ganga Ram Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Karamveer Multispeciality Hospital",
+    address: "Near Bus Stand, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Bathinda"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Sukh Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Janak Surgicare & Ankur Urology",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Star Medicity Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Galaxy Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Park Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Pride Healthcare Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Neelam Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Longia Eye Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Guru Nanak Mehar Hans Eye Hosp.",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Phull Neuro Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Prime Multispeciality Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Excel Healthcare",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Sahara Multispeciality Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Simrita Nursing Home",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Dr G.S. Randhawa Eye Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Garg Mission Hospital",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Vardhman Mahaveer Health Care",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+    name: "Bhagwan Healthcare Centre",
+    address: "Bathinda City, Bathinda",
+    district: "Bathinda",
+    type: "Private",
+    pincode: "151001",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+  },
+  {
+  name: "Shakti Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Suraksha Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Tejas Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Tulsi Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Usha Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vardhman Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Veer Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vijay Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vikram Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vinayak Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vishal Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Yash Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Yoga Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Zonal Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Zenith Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Zora Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Anmol Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Balaji Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Bharat Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Chand Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Deep Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Ekta Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Fortis Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Galaxy Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Harsh Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Imperial Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Jagat Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Kalyan Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Lakshmi Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Maan Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Navjeevan Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Om Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Pavan Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Raj Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Sai Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Sant Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Shakti Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Siddharth Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Siddique Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Sitaram Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Sun Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Suraksha Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Swami Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Tejas Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Triveni Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "Vikas Hospital",
+  address: "Bathinda City, Bathinda",
+  district: "Bathinda",
+  type: "Private",
+  contact: "108",
+  pincode: "151001",
+  location: "https://www.google.com/maps/search/Bathinda+City,+Bathinda"
+},
+{
+  name: "District Hospital Rupnagar",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Civil Hospital Rupnagar",
+  address: "Civil Lines, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Civil+Lines,+Rupnagar"
+},
+{
+  name: "CHC Morinda",
+  address: "Morinda, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140101",
+  location: "https://www.google.com/maps/search/Morinda,+Rupnagar"
+},
+{
+  name: "CHC Kharar",
+  address: "Kharar, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140301",
+  location: "https://www.google.com/maps/search/Kharar,+Rupnagar"
+},
+{
+  name: "Baba Deep Singh Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Balaji Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Sant Hospital",
+  address: "Near Civil Lines, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Civil+Lines,+Rupnagar"
+},
+{
+  name: "Raj Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Mahan Hospital",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Ganga Ram Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Karamveer Multispeciality Hospital",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Guru Nanak Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Sukh Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Janak Surgicare & Ankur Urology",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Star Medicity Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Galaxy Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Park Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Pride Healthcare Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Neelam Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Longia Eye Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "District Hospital Rupnagar",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Civil Hospital Rupnagar",
+  address: "Civil Lines, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Civil+Lines,+Rupnagar"
+},
+{
+  name: "CHC Morinda",
+  address: "Morinda, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140101",
+  location: "https://www.google.com/maps/search/Morinda,+Rupnagar"
+},
+{
+  name: "CHC Kharar",
+  address: "Kharar, Rupnagar",
+  district: "Rupnagar",
+  type: "Government",
+  contact: "108",
+  pincode: "140301",
+  location: "https://www.google.com/maps/search/Kharar,+Rupnagar"
+},
+{
+  name: "Baba Deep Singh Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Balaji Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Sant Hospital",
+  address: "Near Civil Lines, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Civil+Lines,+Rupnagar"
+},
+{
+  name: "Raj Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Mahan Hospital",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Ganga Ram Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Karamveer Multispeciality Hospital",
+  address: "Near Bus Stand, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Rupnagar"
+},
+{
+  name: "Guru Nanak Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Sukh Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Janak Surgicare & Ankur Urology",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Star Medicity Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Galaxy Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Park Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Pride Healthcare Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Neelam Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "Longia Eye Hospital",
+  address: "Rupnagar City, Rupnagar",
+  district: "Rupnagar",
+  type: "Private",
+  contact: "108",
+  pincode: "140001",
+  location: "https://www.google.com/maps/search/Rupnagar+City,+Rupnagar"
+},
+{
+  name: "District Hospital Fazilka",
+  address: "Near Bus Stand, Fazilka",
+  district: "Fazilka",
+  type: "Government",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Fazilka"
+},
+{
+  name: "Civil Hospital Fazilka",
+  address: "Civil Lines, Fazilka",
+  district: "Fazilka",
+  type: "Government",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Civil+Lines,+Fazilka"
+},
+{
+  name: "CHC Abohar",
+  address: "Abohar, Fazilka",
+  district: "Fazilka",
+  type: "Government",
+  contact: "108",
+  pincode: "152116",
+  location: "https://www.google.com/maps/search/Abohar,+Fazilka"
+},
+{
+  name: "CHC Jalalabad",
+  address: "Jalalabad, Fazilka",
+  district: "Fazilka",
+  type: "Government",
+  contact: "108",
+  pincode: "152024",
+  location: "https://www.google.com/maps/search/Jalalabad,+Fazilka"
+},
+{
+  name: "Baba Deep Singh Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Sant Hospital",
+  address: "Near Civil Lines, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Near+Civil+Lines,+Fazilka"
+},
+{
+  name: "Raj Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Balaji Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Ganga Ram Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Guru Nanak Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Mahan Hospital",
+  address: "Near Bus Stand, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Fazilka"
+},
+{
+  name: "Karamveer Multispeciality Hospital",
+  address: "Abohar Road, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Abohar+Road,+Fazilka"
+},
+{
+  name: "Star Medicity Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "Park Hospital",
+  address: "Near Railway Road, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Near+Railway+Road,+Fazilka"
+},
+{
+  name: "Vardhman Hospital",
+  address: "Jalalabad Road, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Jalalabad+Road,+Fazilka"
+},
+{
+  name: "Simrita Nursing Home",
+  address: "Abohar, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152116",
+  location: "https://www.google.com/maps/search/Abohar,+Fazilka"
+},
+{
+  name: "Excel Healthcare",
+  address: "Near GT Road, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Near+GT+Road,+Fazilka"
+},
+{
+  name: "Sahara Multispeciality Hospital",
+  address: "Fazilka City, Fazilka",
+  district: "Fazilka",
+  type: "Private",
+  contact: "108",
+  pincode: "152123",
+  location: "https://www.google.com/maps/search/Fazilka+City,+Fazilka"
+},
+{
+  name: "District Hospital Hoshiarpur",
+  address: "Near Civil Lines, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Government",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Near+Civil+Lines,+Hoshiarpur"
+},
+{
+  name: "Civil Hospital Hoshiarpur",
+  address: "Civil Lines, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Government",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Civil+Lines,+Hoshiarpur"
+},
+{
+  name: "CHC Garhshankar",
+  address: "Garhshankar, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Government",
+  contact: "108",
+  pincode: "144527",
+  location: "https://www.google.com/maps/search/Garhshankar,+Hoshiarpur"
+},
+{
+  name: "CHC Mukerian",
+  address: "Mukerian, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Government",
+  contact: "108",
+  pincode: "144211",
+  location: "https://www.google.com/maps/search/Mukerian,+Hoshiarpur"
+},
+{
+  name: "CHC Tanda",
+  address: "Tanda, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Government",
+  contact: "108",
+  pincode: "144202",
+  location: "https://www.google.com/maps/search/Tanda,+Hoshiarpur"
+},
+{
+  name: "Baba Deep Singh Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Sant Hospital",
+  address: "Near Civil Lines, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Near+Civil+Lines,+Hoshiarpur"
+},
+{
+  name: "Raj Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Balaji Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Guru Nanak Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Mahan Hospital",
+  address: "Near Bus Stand, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Hoshiarpur"
+},
+{
+  name: "Ganga Ram Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Janak Surgicare & Ankur Urology",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Galaxy Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Park Hospital",
+  address: "Near Railway Station, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Near+Railway+Station,+Hoshiarpur"
+},
+{
+  name: "Prime Multispeciality Hospital",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Simrita Nursing Home",
+  address: "Garhshankar Road, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Garhshankar+Road,+Hoshiarpur"
+},
+{
+  name: "Sahara Multispeciality Hospital",
+  address: "Tanda Road, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Tanda+Road,+Hoshiarpur"
+},
+{
+  name: "Excel Healthcare",
+  address: "Hoshiarpur City, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Hoshiarpur+City,+Hoshiarpur"
+},
+{
+  name: "Longia Eye Hospital",
+  address: "Near Model Town, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Near+Model+Town,+Hoshiarpur"
+},
+{
+  name: "Garg Mission Hospital",
+  address: "Mukerian Road, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Mukerian+Road,+Hoshiarpur"
+},
+{
+  name: "Vardhman Hospital",
+  address: "Civil Lines Extension, Hoshiarpur",
+  district: "Hoshiarpur",
+  type: "Private",
+  contact: "108",
+  pincode: "146001",
+  location: "https://www.google.com/maps/search/Civil+Lines+Extension,+Hoshiarpur"
+},
+{
+  name: "Civil Hospital Ludhiana",
+  address: "Civil Lines, Ludhiana",
+  district: "Ludhiana",
+  type: "Government",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Civil+Lines,+Ludhiana"
+},
+{
+  name: "District Hospital Ludhiana",
+  address: "Near Bus Stand, Ludhiana",
+  district: "Ludhiana",
+  type: "Government",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Near+Bus+Stand,+Ludhiana"
+},
+{
+  name: "CHC Raikot",
+  address: "Raikot, Ludhiana",
+  district: "Ludhiana",
+  type: "Government",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Raikot,+Ludhiana"
+},
+{
+  name: "CHC Jagraon",
+  address: "Jagraon, Ludhiana",
+  district: "Ludhiana",
+  type: "Government",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Jagraon,+Ludhiana"
+},
+{
+  name: "CHC Samrala",
+  address: "Samrala, Ludhiana",
+  district: "Ludhiana",
+  type: "Government",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Samrala,+Ludhiana"
+},
+{
+  name: "Dayanand Medical College & Hospital",
+  address: "Tagore Nagar, Civil Lines, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Tagore+Nagar,+Civil+Lines,+Ludhiana"
+},
+{
+  name: "Christian Medical College (CMC)",
+  address: "Brown Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Brown+Road,+Ludhiana"
+},
+{
+  name: "Fortis Hospital",
+  address: "Chandigarh Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Chandigarh+Road,+Ludhiana"
+},
+{
+  name: "SPS Hospital",
+  address: "Grand Trunk Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Grand+Trunk+Road,+Ludhiana"
+},
+{
+  name: "Mohandai Oswal Hospital",
+  address: "Sherpur Chowk, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Sherpur+Chowk,+Ludhiana"
+},
+{
+  name: "Kalra Hospital",
+  address: "Model Town, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Model+Town,+Ludhiana"
+},
+{
+  name: "GNEC Hospital",
+  address: "Gill Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Gill+Road,+Ludhiana"
+},
+{
+  name: "Verma Hospital",
+  address: "Dugri Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Dugri+Road,+Ludhiana"
+},
+{
+  name: "Kataria Hospital",
+  address: "Miller Ganj, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Miller+Ganj,+Ludhiana"
+},
+{
+  name: "Arora Neuro Centre",
+  address: "Model Town Extension, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Model+Town+Extension,+Ludhiana"
+},
+{
+  name: "Suman Hospital",
+  address: "Haibowal, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Haibowal,+Ludhiana"
+},
+{
+  name: "Indus Super Specialty Hospital",
+  address: "Jawaddi, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Jawaddi,+Ludhiana"
+},
+{
+  name: "Saini Hospital",
+  address: "Sita Nagar, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Sita+Nagar,+Ludhiana"
+},
+{
+  name: "New Life Hospital",
+  address: "Pakhowal Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Pakhowal+Road,+Ludhiana"
+},
+{
+  name: "Gulati Hospital",
+  address: "Shimlapuri, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Shimlapuri,+Ludhiana"
+},
+{
+  name: "Ludhiana Medicity Hospital",
+  address: "Moti Nagar, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Moti+Nagar,+Ludhiana"
+},
+{
+  name: "Kalra Super Speciality Hospital",
+  address: "Model Town Extension, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Model+Town+Extension,+Ludhiana"
+},
+{
+  name: "Sidhu Hospital",
+  address: "Ferozepur Road, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Ferozepur+Road,+Ludhiana"
+},
+{
+  name: "Orbit Hospital",
+  address: "South City, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/South+City,+Ludhiana"
+},
+{
+  name: "Bawa Hospital",
+  address: "New Model Town, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/New+Model+Town,+Ludhiana"
+},
+{
+  name: "Bhalla Hospital",
+  address: "Model Gram, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Model+Gram,+Ludhiana"
+},
+{
+  name: "Apex Hospital",
+  address: "BRS Nagar, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/BRS+Nagar,+Ludhiana"
+},
+{
+  name: "Sanjivani Hospital",
+  address: "Industrial Area-B, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Industrial+Area-B,+Ludhiana"
+},
+{
+  name: "Guru Nanak Hospital",
+  address: "Ludhiana City, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Ludhiana+City,+Ludhiana"
+},
+{
+  name: "Sharma Multispeciality Hospital",
+  address: "Giaspura, Ludhiana",
+  district: "Ludhiana",
+  type: "Private",
+  contact: "108",
+  location: "https://www.google.com/maps/search/Giaspura,+Ludhiana"
+},
+  {
+    name: "Deep Hospital",
+    address: "Pakhowal Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Pakhowal+Road,+Ludhiana"
+  },
+  {
+    name: "Aggarwal Hospital",
+    address: "Basti Jodhewal, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Basti+Jodhewal,+Ludhiana"
+  },
+  {
+    name: "Goyal Hospital",
+    address: "Model Town, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Ludhiana"
+  },
+  {
+    name: "RK Multispeciality Hospital",
+    address: "Haibowal, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Haibowal,+Ludhiana"
+  },
+  {
+    name: "Jeevan Jot Hospital",
+    address: "Janakpuri, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Janakpuri,+Ludhiana"
+  },
+  {
+    name: "Aditya Hospital",
+    address: "Salem Tabri, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Salem+Tabri,+Ludhiana"
+  },
+  {
+    name: "Preet Hospital",
+    address: "Miller Ganj, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Miller+Ganj,+Ludhiana"
+  },
+  {
+    name: "Mohan Hospital",
+    address: "Ghumar Mandi, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Ghumar+Mandi,+Ludhiana"
+  },
+  {
+    name: "Life Line Hospital",
+    address: "Tajpur Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tajpur+Road,+Ludhiana"
+  },
+  {
+    name: "Drishti Eye Hospital",
+    address: "Model Town, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Ludhiana"
+  },
+  {
+    name: "Bedi Hospital",
+    address: "Gill Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gill+Road,+Ludhiana"
+  },
+  {
+    name: "Bhandari Hospital",
+    address: "Daresi Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Daresi+Road,+Ludhiana"
+  },
+  {
+    name: "Star Hospital",
+    address: "Giaspura, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Giaspura,+Ludhiana"
+  },
+  {
+    name: "Sehgal Hospital",
+    address: "Pakhowal Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Pakhowal+Road,+Ludhiana"
+  },
+  {
+    name: "Amar Hospital",
+    address: "Sunder Nagar, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sunder+Nagar,+Ludhiana"
+  },
+  {
+    name: "Sidana Hospital",
+    address: "Sarabha Nagar, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sarabha+Nagar,+Ludhiana"
+  },
+  {
+    name: "Krishna Hospital",
+    address: "Model Town Extension, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town+Extension,+Ludhiana"
+  },
+  {
+    name: "Dr. Goyal Eye Hospital",
+    address: "Haibowal Kalan, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Haibowal+Kalan,+Ludhiana"
+  },
+  {
+    name: "Arora Eye Hospital",
+    address: "Gurdev Nagar, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gurdev+Nagar,+Ludhiana"
+  },
+  {
+    name: "Vishwas Hospital",
+    address: "Daba Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Daba+Road,+Ludhiana"
+  },
+  {
+    name: "New Aman Hospital",
+    address: "Samrala Chowk, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Samrala+Chowk,+Ludhiana"
+  },
+  {
+    name: "Bhandari Maternity & Eye Hospital",
+    address: "Civil Lines, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Ludhiana"
+  },
+  {
+    name: "Saini Neuro Care Hospital",
+    address: "Miller Ganj, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Miller+Ganj,+Ludhiana"
+  },
+  {
+    name: "Arpan Hospital",
+    address: "Sherpur, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sherpur,+Ludhiana"
+  },
+  {
+    name: "Omega Hospital",
+    address: "Dugri, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dugri,+Ludhiana"
+  },
+  {
+    name: "Dr. Puri Hospital",
+    address: "Gill Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gill+Road,+Ludhiana"
+  },
+  {
+    name: "Gulshan Hospital",
+    address: "Tibba Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tibba+Road,+Ludhiana"
+  },
+  {
+    name: "Maan Hospital",
+    address: "Jagraon Bridge, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Jagraon+Bridge,+Ludhiana"
+  },
+  {
+    name: "Kalyan Hospital",
+    address: "Ferozepur Road, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Ferozepur+Road,+Ludhiana"
+  },
+  {
+    name: "Sai Hospital",
+    address: "Shimlapuri, Ludhiana",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Shimlapuri,+Ludhiana"
+  },
+  {
+    name: "Shakti Hospital",
+    address: "Rahon Road, Ludhiana, Punjab 141008",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Rahon+Road,+Ludhiana+Punjab+141008"
+  },
+  {
+    name: "Jasmeen Hospital",
+    address: "Tajpur Road, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tajpur+Road,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "AMRIT Hospital",
+    address: "Link Road, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Link+Road,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Amar Maternity and Surgical Hospital",
+    address: "Haibowal Kalan, Ludhiana, Punjab 141008",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Haibowal+Kalan,+Ludhiana+Punjab+141008"
+  },
+  {
+    name: "Sehgal Maternity and Eye Care Centre",
+    address: "Civil Lines, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Atam Hospital",
+    address: "Model Town, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Arya Hospital",
+    address: "Salem Tabri, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Salem+Tabri,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Dr. Kohli’s Multispeciality Hospital",
+    address: "Dugri Road, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dugri+Road,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Goyal Maternity and Child Hospital",
+    address: "Focal Point, Ludhiana, Punjab 141010",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Focal+Point,+Ludhiana+Punjab+141010"
+  },
+  {
+    name: "Mehar Hospital",
+    address: "Pakhowal Road, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Pakhowal+Road,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Mahavir Hospital",
+    address: "Industrial Area-A, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Industrial+Area-A,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Vikas Hospital",
+    address: "Sherpur Chowk, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sherpur+Chowk,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Indu Hospital",
+    address: "Samrala Road, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Samrala+Road,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Aman Hospital",
+    address: "Haibowal Road, Ludhiana, Punjab 141008",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Haibowal+Road,+Ludhiana+Punjab+141008"
+  },
+  {
+    name: "New Life Maternity & Child Hospital",
+    address: "Model Town Extn., Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town+Extn.,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Sita Maternity & Surgical Hospital",
+    address: "Salem Tabri, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Salem+Tabri,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Amar Eye Hospital",
+    address: "Civil Lines, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Mann Hospital",
+    address: "Pakhowal Road, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Pakhowal+Road,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Rajiv Hospital",
+    address: "Daresi Ground, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Daresi+Ground,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Health First Hospital",
+    address: "Dugri Phase-1, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dugri+Phase-1,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Ramesh Hospital",
+    address: "Field Ganj, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Field+Ganj,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Punjab Eye & Retina Hospital",
+    address: "Model Town, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Model+Town,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "Verma Children Hospital",
+    address: "Ghumar Mandi, Ludhiana, Punjab 141003",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Ghumar+Mandi,+Ludhiana+Punjab+141003"
+  },
+  {
+    name: "Ek Onkar Hospital",
+    address: "Samrala Road, Ludhiana, Punjab 141001",
+    district: "Ludhiana",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Samrala+Road,+Ludhiana+Punjab+141001"
+  },
+  {
+    name: "District Hospital Pathankot",
+    address: "Near Bus Stand, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Civil Hospital Pathankot",
+    address: "Civil Lines, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "CHC Narot Jaimal Singh",
+    address: "Narot Jaimal Singh, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Narot+Jaimal+Singh,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "CHC Dhar Kalan",
+    address: "Dhar Kalan, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dhar+Kalan,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Guru Nanak Mission Hospital",
+    address: "Dalhousie Road, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dalhousie+Road,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Aman Hospital",
+    address: "Mission Road, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mission+Road,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Saini Hospital",
+    address: "Dhangu Road, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dhangu+Road,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Bansal Hospital",
+    address: "Mamun, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mamun,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Verma Hospital",
+    address: "Sujanpur Road, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sujanpur+Road,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Lifeline Hospital",
+    address: "Dalhousie Road, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dalhousie+Road,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Sehgal Multispeciality Hospital",
+    address: "Mamun, Pathankot, Punjab 145001",
+    district: "Pathankot",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Mamun,+Pathankot+Punjab+145001"
+  },
+  {
+    name: "Civil Hospital Mohali",
+    address: "Phase 6, Mohali, Punjab 160055",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+6,+Mohali+Punjab+160055"
+  },
+  {
+    name: "District Hospital Mohali",
+    address: "Near PCA Stadium, Mohali, Punjab 160059",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+PCA+Stadium,+Mohali+Punjab+160059"
+  },
+  {
+    name: "CHC Kharar",
+    address: "Kharar, Mohali, Punjab 140301",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar,+Mohali+Punjab+140301"
+  },
+  {
+    name: "CHC Dera Bassi",
+    address: "Dera Bassi, Mohali, Punjab 140507",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dera+Bassi,+Mohali+Punjab+140507"
+  },
+  {
+    name: "Max Super Speciality Hospital",
+    address: "Phase 6, Mohali, Punjab 160055",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+6,+Mohali+Punjab+160055"
+  },
+  {
+    name: "Fortis Hospital",
+    address: "Sector 62, Phase 8, Mohali, Punjab 160062",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+62,+Phase+8,+Mohali+Punjab+160062"
+  },
+  {
+    name: "Ivy Hospital",
+    address: "Sector 71, Mohali, Punjab 160071",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+71,+Mohali+Punjab+160071"
+  },
+  {
+    name: "Grecian Super Speciality Hospital",
+    address: "Sector 69, Mohali, Punjab 160069",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+69,+Mohali+Punjab+160069"
+  },
+  {
+    name: "Shalby Multispeciality Hospital",
+    address: "Phase 9, Mohali, Punjab 160059",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+9,+Mohali+Punjab+160059"
+  },
+  {
+    name: "Amcare Hospital",
+    address: "VIP Road, Zirakpur, Mohali, Punjab 140603",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/VIP+Road,+Zirakpur,+Mohali+Punjab+140603"
+  },
+  {
+    name: "Chhabra Hospital",
+    address: "Sector 70, Mohali, Punjab 160070",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+70,+Mohali+Punjab+160070"
+  },
+  {
+    name: "JP Hospital",
+    address: "Kharar, Mohali, Punjab 140301",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar,+Mohali+Punjab+140301"
+  },
+  {
+    name: "Healing Hospital",
+    address: "Sector 46, Near Mohali (Chandigarh), Punjab 160046",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+46,+Near+Mohali+(Chandigarh)+Punjab+160046"
+  },
+  {
+    name: "Gopal Hospital",
+    address: "Kharar, Mohali, Punjab 140301",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar,+Mohali+Punjab+140301"
+  },
+  {
+    name: "Chaitanya Hospital",
+    address: "Phase 1, Mohali, Punjab 160001",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+1,+Mohali+Punjab+160001"
+  },
+  {
+    name: "NINS Hospital",
+    address: "Sector 69, Mohali, Punjab 160069",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+69,+Mohali+Punjab+160069"
+  },
+  {
+    name: "Sanjivani Hospital",
+    address: "Sector 69, Mohali, Punjab 160069",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+69,+Mohali+Punjab+160069"
+  },
+  {
+    name: "Cosmo Hospital",
+    address: "Sector 62, Mohali, Punjab 160062",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+62,+Mohali+Punjab+160062"
+  },
+  {
+    name: "Cheema Hospital",
+    address: "Phase 5, Mohali, Punjab 160055",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+5,+Mohali+Punjab+160055"
+  },
+  {
+    name: "Mukat Hospital",
+    address: "Sector 69, Mohali, Punjab 160069",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+69,+Mohali+Punjab+160069"
+  },
+  {
+    name: "Ranjit Multispeciality Hospital",
+    address: "Dera Bassi, Mohali, Punjab 140507",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Dera+Bassi,+Mohali+Punjab+140507"
+  },
+  {
+    name: "Kaushal Hospital",
+    address: "Kharar, Mohali, Punjab 140301",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar,+Mohali+Punjab+140301"
+  },
+  {
+    name: "Civil Hospital Dera Bassi",
+    address: "Near SDM Office, Dera Bassi, Punjab 140507",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+SDM+Office,+Dera+Bassi+Punjab+140507"
+  },
+  {
+    name: "Government Ayurvedic Hospital",
+    address: "Kharar Road, Mohali, Punjab 160059",
+    district: "Mohali",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar+Road,+Mohali+Punjab+160059"
+  },
+  {
+    name: "Ayush General Hospital",
+    address: "Kharar Road, Mohali, Punjab 160059",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar+Road,+Mohali+Punjab+160059"
+  },
+  {
+    name: "New Life Hospital",
+    address: "Zirakpur, Mohali, Punjab 140603",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Zirakpur,+Mohali+Punjab+140603"
+  },
+  {
+    name: "Gupta Multispeciality Hospital",
+    address: "Sector 70, Mohali, Punjab 160070",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+70,+Mohali+Punjab+160070"
+  },
+  {
+    name: "Sanjeevani Hospital",
+    address: "Sector 71, Mohali, Punjab 160071",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+71,+Mohali+Punjab+160071"
+  },
+  {
+    name: "JP Eye Hospital",
+    address: "Kharar, Mohali, Punjab 140301",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Kharar,+Mohali+Punjab+140301"
+  },
+  {
+    name: "Shri Balaji Hospital",
+    address: "Sector 65, Mohali, Punjab 160065",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+65,+Mohali+Punjab+160065"
+  },
+  {
+    name: "Amar Hospital",
+    address: "Sector 70, Mohali, Punjab 160070",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sector+70,+Mohali+Punjab+160070"
+  },
+  {
+    name: "Life Care Hospital",
+    address: "Phase 3B2, Mohali, Punjab 160059",
+    district: "Mohali",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Phase+3B2,+Mohali+Punjab+160059"
+  },
+  {
+    name: "District Hospital Sri Muktsar Sahib",
+    address: "Near Civil Lines, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Civil+Lines,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "Civil Hospital Sri Muktsar Sahib",
+    address: "Civil Lines, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "CHC Gidderbaha",
+    address: "Gidderbaha, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "CHC Malout",
+    address: "Malout, Sri Muktsar Sahib, Punjab 152107",
+    district: "Sri Muktsar Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout,+Sri+Muktsar+Sahib+Punjab+152107"
+  },
+  {
+    name: "CHC Lambi",
+    address: "Lambi, Sri Muktsar Sahib, Punjab 152118",
+    district: "Sri Muktsar Sahib",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Lambi,+Sri+Muktsar+Sahib+Punjab+152118"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Gidderbaha, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "Malout Multispeciality Hospital",
+    address: "Malout, Sri Muktsar Sahib, Punjab 152107",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout,+Sri+Muktsar+Sahib+Punjab+152107"
+  },
+  {
+    name: "Amar Hospital",
+    address: "Malout Road, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout+Road,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "Dashmesh Hospital",
+    address: "Gidderbaha, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "Vardhman Hospital",
+    address: "Near Civil Hospital, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Civil+Hospital,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "Star Hospital",
+    address: "Malout Road, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout+Road,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "Dr. Kohli Hospital",
+    address: "Gidderbaha Road, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha+Road,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Malout, Sri Muktsar Sahib, Punjab 152107",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout,+Sri+Muktsar+Sahib+Punjab+152107"
+  },
+  {
+    name: "Sanjeevani Hospital",
+    address: "Sri Muktsar Sahib City, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sri+Muktsar+Sahib+City+Punjab+152026"
+  },
+  {
+    name: "Life Line Hospital",
+    address: "Sri Muktsar Sahib City, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Sri+Muktsar+Sahib+City+Punjab+152026"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Gidderbaha, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "Baba Farid Hospital",
+    address: "Malout Road, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout+Road,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "Aastha Hospital",
+    address: "Near Bus Stand, Sri Muktsar Sahib, Punjab 152026",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Sri+Muktsar+Sahib+Punjab+152026"
+  },
+  {
+    name: "New Life Hospital",
+    address: "Malout, Sri Muktsar Sahib, Punjab 152107",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Malout,+Sri+Muktsar+Sahib+Punjab+152107"
+  },
+  {
+    name: "Amar Eye Hospital",
+    address: "Gidderbaha, Sri Muktsar Sahib, Punjab 152101",
+    district: "Sri Muktsar Sahib",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Gidderbaha,+Sri+Muktsar+Sahib+Punjab+152101"
+  },
+  {
+    name: "District Hospital Tarn Taran",
+    address: "Near Bus Stand, Tarn Taran, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Tarn+Taran+Punjab+143410"
+  },
+  {
+    name: "Civil Hospital Tarn Taran",
+    address: "Civil Lines, Tarn Taran, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Civil+Lines,+Tarn+Taran+Punjab+143410"
+  },
+  {
+    name: "CHC Khemkaran",
+    address: "Khemkaran, Tarn Taran, Punjab 143418",
+    district: "Tarn Taran",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Khemkaran,+Tarn+Taran+Punjab+143418"
+  },
+  {
+    name: "CHC Patti",
+    address: "Patti, Tarn Taran, Punjab 143412",
+    district: "Tarn Taran",
+    type: "Government",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Patti,+Tarn+Taran+Punjab+143412"
+  },
+  {
+    name: "Baba Deep Singh Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Gurdwara Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Sant Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Balaji Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Raj Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Mahan Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Ashwini Hospital",
+    address: "Near Bus Stand, Tarn Taran, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Near+Bus+Stand,+Tarn+Taran+Punjab+143410"
+  },
+  {
+    name: "Sanjeevani Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Life Care Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Guru Nanak Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Pride Healthcare Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+  {
+    name: "Park Hospital",
+    address: "Tarn Taran City, Punjab 143410",
+    district: "Tarn Taran",
+    type: "Private",
+    contact: "108",
+    location: "https://www.google.com/maps/search/Tarn+Taran+City+Punjab+143410"
+  },
+
+      { name: "Pride Healthcare Hospital", district: "Tarn Taran", type: "Private", contact: "", address: "Tarn Taran City", location: "https://www.google.com/maps/search/Tarn%20Taran%20City" }
+];
+
+let hospitals = [];
+try {
+  const stored = localStorage.getItem("hospitals");
+  hospitals = stored ? JSON.parse(stored) : defaultHospitals;
+} catch (e) {
+  hospitals = defaultHospitals;
+  console.error("Failed to load from localStorage, using defaults.", e);
+}
+
+// DOM elements
+const hospitalList = document.getElementById("hospitalList");
+const searchInput = document.getElementById("searchInput");
+const districtFilter = document.getElementById("districtFilter");
+const typeFilter = document.getElementById("typeFilter");
+
+// Generate star rating HTML (full, half, empty stars)
+function generateStars(rating = 4) {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5;
+  let html = "";
+  for (let i = 0; i < full; i++) html += '<i class="fas fa-star star"></i>';
+  if (half) html += '<i class="fas fa-star-half-alt star"></i>';
+  for (let i = full + (half ? 1 : 0); i < 5; i++) html += '<i class="far fa-star star"></i>';
+  return html;
+}
+
+// Render hospital cards
+function renderHospitals(list) {
+  hospitalList.innerHTML = "";
+  if (list.length === 0) {
+    hospitalList.innerHTML = `<p class="text-red-600 text-center text-sm mt-4">🚫 No hospitals found.</p>`;
+    return;
+  }
+
+  list.forEach(h => {
+    const card = document.createElement("div");
+    card.className = "bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md border border-gray-200 dark:border-gray-700";
+
+    // Call button (active only if contact exists)
+    const callButton = h.contact && h.contact.trim() !== ""
+      ? `<a href="tel:${h.contact}" class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">📞 Call</a>`
+      : `<button disabled class="bg-gray-400 text-white px-3 py-1 rounded cursor-not-allowed" title="Contact Not Available">📞 Call</button>`;
+
+    // Encode spaces in location URL if needed
+    const locationUrl = h.location && h.location.startsWith("http")
+      ? h.location
+      : `https://www.google.com/maps/search/${encodeURIComponent(h.address)}`;
+
+    card.innerHTML = `
+      <h3 class="text-lg font-semibold text-blue-900 dark:text-white">${h.name}</h3>
+      <p class="text-sm text-gray-700 dark:text-gray-300">📍 ${h.address}</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">🏷️ ${h.type}</p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">📞 ${h.contact || 'Not Available'}</p>
+      <div class="flex items-center gap-1 mt-2 text-yellow-500 text-sm">${generateStars(h.rating)}</div>
+      <div class="flex gap-3 mt-4 text-sm flex-wrap">
+        ${callButton}
+        <a href="${locationUrl}" target="_blank" class="bg-gray-300 text-gray-900 px-3 py-1 rounded hover:bg-gray-400">📍 Directions</a>
+      </div>
+    `;
+
+    hospitalList.appendChild(card);
+  });
+}
+
+  // Filter based on input
+  function filterHospitals() {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    const district = districtFilter.value;
+    const type = typeFilter.value;
+
+    const filtered = hospitals.filter(h =>
+      h.name.toLowerCase().includes(searchTerm) &&
+      (district ? h.district === district : true) &&
+      (type ? h.type === type : true)
+    );
+
+    renderHospitals(filtered);
+  }
+
+  // Event listeners
+  searchInput.addEventListener("input", filterHospitals);
+  districtFilter.addEventListener("change", filterHospitals);
+  typeFilter.addEventListener("change", filterHospitals);
+
+  // Initial Load
+  renderHospitals(hospitals);
+
+
+  // Voice Search Setup (Web Speech API)
+  const micButton = document.getElementById("micButton");
+  let recognition;
+  if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = "en-IN";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    micButton.addEventListener("click", () => {
+      recognition.start();
+      micButton.textContent = "🎙️ Listening...";
+      micButton.disabled = true;
+    });
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      searchInput.value = transcript;
+      micButton.textContent = "🎤";
+      micButton.disabled = false;
+      filterHospitals();
+    };
+    recognition.onerror = () => {
+      micButton.textContent = "🎤";
+      micButton.disabled = false;
+    };
+    recognition.onend = () => {
+      micButton.textContent = "🎤";
+      micButton.disabled = false;
+    };
+  } else {
+    micButton.style.display = "none";
+  }
+
+  // Share hospital info function
+  function shareHospital(name, address, contact, location) {
+    const shareData = {
+      title: decodeURIComponent(name),
+      text: `Hospital: ${decodeURIComponent(name)}\nAddress: ${decodeURIComponent(address)}\nContact: ${decodeURIComponent(contact)}`,
+      url: decodeURIComponent(location)
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => alert("Sharing failed or cancelled"));
+    } else {
+      prompt("Copy this info to share:", `${shareData.title}\n${shareData.text}\n${shareData.url}`);
+    }
+  }
+
+  // Autocomplete for searchInput
+  searchInput.addEventListener("input", function() {
+    const val = this.value.toLowerCase();
+    closeAllLists();
+    if (!val) return false;
+
+    const matchingHospitals = hospitals.filter(h => h.name.toLowerCase().startsWith(val)).slice(0, 10);
+
+    if (matchingHospitals.length === 0) return false;
+
+    const list = document.createElement("div");
+    list.setAttribute("id", this.id + "autocomplete-list");
+    list.setAttribute("class", "autocomplete-items");
+    this.parentNode.appendChild(list);
+
+    matchingHospitals.forEach(hospital => {
+      const item = document.createElement("div");
+      item.innerHTML = "<strong>" + hospital.name.substr(0, val.length) + "</strong>";
+      item.innerHTML += hospital.name.substr(val.length);
+      item.innerHTML += `<input type='hidden' value='${hospital.name}'>`;
+      item.addEventListener("click", function() {
+        searchInput.value = this.getElementsByTagName("input")[0].value;
+        closeAllLists();
+        filterHospitals();
+      });
+      list.appendChild(item);
+    });
+  });
+
+  // Close autocomplete lists
+  function closeAllLists(elmnt) {
+    const items = document.getElementsByClassName("autocomplete-items");
+    for (let i = items.length - 1; i >= 0; i--) {
+      if (elmnt != items[i] && elmnt != searchInput) {
+        items[i].parentNode.removeChild(items[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function(e) {
+    closeAllLists(e.target);
+  });
+
+  // Search form submit triggers filter
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    filterHospitals();
+  });
+
+  // Offline alert
+  function showOfflineAlert(show) {
+    offlineAlert.classList.toggle("hidden", !show);
+  }
+  window.addEventListener("offline", () => showOfflineAlert(true));
+  window.addEventListener("online", () => showOfflineAlert(false));
+
+  // Emergency Button: Find 3-4 nearest hospitals by user location
+  emergencyBtn.addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+    emergencyBtn.textContent = "Locating...";
+    navigator.geolocation.getCurrentPosition((position) => {
+      emergencyBtn.textContent = "🆘 Emergency Nearby";
+      const { latitude, longitude } = position.coords;
+
+      // Calculate distance and sort
+      const hospitalsWithDistance = hospitals.map(h => {
+        const dist = getDistanceFromLatLonInKm(latitude, longitude, h.lat, h.lng);
+        return {...h, distance: dist};
+      }).sort((a, b) => a.distance - b.distance);
+
+      // Take top 4 nearest
+      const nearest = hospitalsWithDistance.slice(0, 4);
+
+      renderHospitals(nearest);
+
+      alert(`Showing ${nearest.length} nearest hospitals to your location.`);
+    }, (err) => {
+      emergencyBtn.textContent = "🆘 Emergency Nearby";
+      alert("Unable to get your location: " + err.message);
+    });
+  });
+
+  // Distance calculator between two lat/lng points
+  function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+    if(!lat2 || !lon2) return 9999; // in case lat/lng missing for hospital
+    const R = 6371; // Radius of earth in km
+    const dLat = deg2rad(lat2 - lat1);
+    const dLon = deg2rad(lon2 - lon1);
+    const a =
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon/2) * Math.sin(dLon/2)
+    ;
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const d = R * c; // Distance in km
+    return d;
+  }
+  function deg2rad(deg) {
+    return deg * (Math.PI/180);
+  }
+
+  // Initial render all hospitals
+  renderHospitals(hospitals);
+</script>
+
+</body>
+</html>
